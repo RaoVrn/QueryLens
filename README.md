@@ -1,12 +1,12 @@
 <div align="center">
 
-![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=NLP2SQL&fontSize=80&animation=fadeIn&fontAlignY=35)
+![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=QueryLens&fontSize=80&animation=fadeIn&fontAlignY=35)
 
 </div>
 
 <div align="center">
 
-[![Made with Azure OpenAI](https://img.shields.io/badge/Made%20with-Azure%20OpenAI-0078D4?style=for-the-badge&logo=microsoft)](https://azure.microsoft.com/en-us/services/cognitive-services/openai/)
+[![Made with Gemini](https://img.shields.io/badge/Made%20with-Gemini-0078D4?style=for-the-badge&logo=microsoft)](https://azure.microsoft.com/en-us/services/cognitive-services/openai/)
 [![Built with Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://streamlit.io)
 [![Database](https://img.shields.io/badge/Database-PostgreSQL%20%7C%20SQLite-336791?style=for-the-badge&logo=postgresql)](https://www.postgresql.org/)
 
@@ -26,7 +26,7 @@
 <summary>🎯 Core Features</summary>
 
 - **Natural Language to SQL** 🗣️ → 📝
-  - Convert text queries into SQL commands using Azure OpenAI models
+  - Convert text queries into SQL commands using Gemini models
   - Intelligent query interpretation with detailed decision logs
   - Step-by-step reasoning for query generation
 - **Multi-Database Support** 🗄️
@@ -85,8 +85,8 @@ graph LR
 1️⃣ **Clone the Repository**
 
 ```bash
-git clone https://github.com/lohitkolluri/NLP2SQLL.git
-cd NLP2SQL
+git clone https://github.com/RaoVrn/QueryLens
+cd QueryLens
 ```
 
 2️⃣ **Set Up Environment**
@@ -94,10 +94,9 @@ cd NLP2SQL
 ```bash
 # Create .env file
 cat << EOF > .env
-OPENAI_ENDPOINT="https://[ENDPOINT_NAME].openai.azure.com"
-OPENAI_API_VERSION="2024-08-01-preview"
-OPENAI_API_KEY="YOUR AZURE OPENAI API KEY"
-MODEL_NAME="YOUR AZURE OPENAI MODEL NAME"
+# Gemini Configuration
+LLM_PROVIDER=GEMINI
+GEMINI_API_KEY="YOUR GEMINI API KEY"
 EOF
 ```
 
@@ -110,7 +109,7 @@ pip install -r requirements.txt
 4️⃣ **Launch the App**
 
 ```bash
-streamlit run app/NLP2SQL.py
+streamlit run app/QueryLens.py
 ```
 
 ## 🎨 Built With
@@ -120,10 +119,11 @@ streamlit run app/NLP2SQL.py
 |                                              Technology                                              |    Purpose     |
 | :--------------------------------------------------------------------------------------------------: | :------------: |
 |     ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit)     | Web Interface  |
-| ![Azure OpenAI](https://img.shields.io/badge/Azure%20OpenAI-0078D4?style=flat-square&logo=microsoft) | NLP Processing |
+| ![Gemini](https://img.shields.io/badge/Gemini-0078D4?style=flat-square&logo=microsoft) | NLP Processing |
 |   ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql)    | PostgreSQL DB  |
 |         ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite)          |   SQLite DB    |
-|               ![Altair](https://img.shields.io/badge/Altair-005571?style=flat-square)                | Visualizations |
+|       ![Plotly](https://img.shields.io/badge/Plotly-FF5A5F?style=flat-square&logo=plotly)              | Visualizations |
+|       ![Build on IDX](https://img.shields.io/badge/Build%20on-IDX-00ADEF?style=flat-square)             | Build System   |
 
 </div>
 
@@ -131,7 +131,7 @@ streamlit run app/NLP2SQL.py
 
 ```mermaid
 mindmap
-  root((NLP2SQL))
+  root((QueryLens))
     Query Processing
       Natural Language Input
       Decision Logging
@@ -153,7 +153,7 @@ mindmap
 ## 💡 How It Works
 
 1. **Query Input** ➡️ User enters natural language query
-2. **Processing** ➡️ Azure OpenAI analyzes and generates SQL with reasoning
+2. **Processing** ➡️ Gemini analyzes and generates SQL with reasoning
 3. **Validation** ➡️ Query is validated for safety and correctness
 4. **Execution** ➡️ Query runs against selected database
 5. **Analysis** ➡️ Results are processed with summary statistics
@@ -188,8 +188,6 @@ mindmap
 
 </div>
 <div align="center">
-
-License © [Lohit Kolluri](LICENSE)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
 
