@@ -1,0 +1,18 @@
+# Core dependencies
+streamlit
+streamlit-nested-layout
+streamlit-extras
+# Data processing and visualization
+pandas
+openpyxl
+plotly
+statsmodels
+# Database
+psycopg2-binary
+sqlalchemy
+# API and configuration
+python-dotenv
+openai
+jsonschema
+# Add statsmodels for statistical models
+statsmodels
